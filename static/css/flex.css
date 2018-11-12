@@ -1,0 +1,16 @@
+.custom-restricted-width {
+	/*display: inline-block;
+	 */
+	margin-top: 1em;
+	margin-right: 0.5em;
+}
+
+.row-flex {
+	display: flex;
+	flex-direction: row; /* default: row */
+}
+
+.col-flex {
+	display: inline-flex;
+	flex-direction: column;
+}
