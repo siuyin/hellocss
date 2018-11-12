@@ -6,3 +6,7 @@ body {
 	margin-top: 1rem;
 }
 
+.flex-row {
+	display: flex;
+}
+
