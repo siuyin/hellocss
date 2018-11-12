@@ -1,7 +1,6 @@
 .custom-restricted-width {
 	/*display: inline-block;
 	 */
-	margin-top: 1em;
 	margin-right: 0.5em;
 }
 
@@ -13,4 +12,16 @@
 .col-flex {
 	display: inline-flex;
 	flex-direction: column;
+}
+
+nav {
+	background-color: #eff;
+}
+
+header  {
+	background-color: #ffc;
+}
+
+footer {
+	background-color: #ffc;
 }

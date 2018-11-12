@@ -1,25 +1,31 @@
 .main-head {
     grid-area: header;
+    background-color: #ffb;
 }
 .content {
     grid-area: content;
+    background-color: #eff;
 }
 .main-nav {
     grid-area: nav;
+    background-color: #fef;
 }
-.side {
-    grid-area: sidebar;
+.sidebar {
+    grid-area: "sidebar";
+    background-color: #fef;
 }
 .ad {
     grid-area: ad;
+    background-color: #fef;
 }
 .main-footer {
     grid-area: footer;
+    background-color: #ffb;
 }
 
 .wrapper {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
     grid-template-areas:
         "header"
         "nav"
@@ -47,7 +53,8 @@
     }
     nav ul {
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between;
+        */
     }
 }
 
