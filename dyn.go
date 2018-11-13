@@ -69,6 +69,7 @@ func (h *dynHdlr) ServeHTTP(wr http.ResponseWriter, r *http.Request) {
 		wr.Header().Set("Content-Type", "text/html; charset=utf-8")
 		wr.Header().Set("Content-Encoding", "gzip")
 		w = zw
+		//log.Println("dyn compr")
 	}
 	dHeadT.Execute(w, struct {
 		Title string

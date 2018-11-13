@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 func main() {
@@ -50,8 +51,14 @@ type zh struct {
 }
 
 func (z *zh) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Encoding", "gzip")
-	z.h.ServeHTTP(gzRW(w), r)
+	hdrs := strings.Join(r.Header["Accept-Encoding"], "|")
+	if strings.Index(hdrs, "gzip") != -1 {
+		w.Header().Set("Content-Encoding", "gzip")
+		z.h.ServeHTTP(gzRW(w), r)
+		//log.Println("compressing")
+		return
+	}
+	z.h.ServeHTTP(w, r)
 }
 func gzHandler(h http.Handler) http.Handler {
 	z := &zh{h: h}
